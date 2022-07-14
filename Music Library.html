@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/styleMusic.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <title>Music Library</title>
+</head>
+<body>
+    
+   <main>
+    
+        <a class="logo" href="index.html">RM</a>
+        <article class="module details">
+            <div class="bg" style="background-image: url(img/0a4dcb92fa2d3c601b58d72720d6bec4.jpg)">
+                <div class="tint" style="background: rgba(0,0,0,0.3)"></div>
+            </div>
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-2">
+                        <div class="inner">
+                            <div class="img" style="background-image:url(img/0a4dcb92fa2d3c601b58d72720d6bec4.jpg)">
+                                <div class="tint-2" style="background: rgba(0,0,0,0.0)"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="info">
+                            <div class="category">
+                                <p>Listening track of the week</p>
+                            </div>
+                            <h5>GOOSEBUMPS</h5>
+                            <span class="tags">
+                                <p>HVME</p>
+                            </span>
+                            <div class="button">
+                                <a class="play" href="" style="text-decoration: none ;">
+                                    Listen</a>
+                                <a class="youtube" href="https://www.youtube.com/watch?v=W5b-a8Nzmag" style="text-decoration: none;">YouTube</a>
+                                <a class="download" href="download.html" style="text-decoration: none;">Download</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </article>
+        <article class="module filters">
+            <div id="music-search-form-sticky-wrapper" class="sticky-wrapper" style="height: 72px;"> 
+            <form class="styled sticky" id="music-search-form" data-spacing="0" method="post" action="/music-search-proxy" style="width: 1850;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <fieldset>
+                            <input class="submit-on-enter" type="text" placeholder="Find Track & Artist" name="q">
+                            <i class="fa-regular fa-magnifying-glass"></i>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-3">
+                        <fieldset>
+                            <input class="submit-on-enter" type="text" placeholder="Genre Serch" name="q">
+                            <i class="fa-regular fa-magnifying-glass"></i>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-3">
+                        <fieldset>
+                            <input class="submit-on-enter" type="text" placeholder="select Mood" name="q">
+                            <i class="fa-regular fa-magnifying-glass"></i>
+                        </fieldset>
+                    </div>
+                    
+                </div>
+            </div>
+            </form>
+            </div>
+        </article>
+            <article class="module artists">
+                <div class="container-fluid">
+                    <h6>Recent Releases</h6>
+                    <img class="artist" src="img/Music Library.jpg">
+                </div>
+            </article>
+   </main>
+</body>
+</html>
