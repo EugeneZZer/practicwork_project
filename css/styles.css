@@ -22,7 +22,7 @@ a img {
 	padding-bottom: 90px;
 	position: absolute;
   	left: 20px;
-  	bottom: 60px;
+  	bottom: 320px;
  	width: 100%;
   	height: 80px;
 	}
@@ -33,7 +33,7 @@ a img {
 		padding-bottom: 90px;
 		position: absolute;
 		  left: 20px;
-		  bottom: -0px;
+		  bottom: 260px;
 		 width: 100%;
 		  height: 80px;
 		}
@@ -403,8 +403,8 @@ header div ul li.niz{
 	margin: 2px;
 	padding-bottom: 90px;
 	position: absolute;
-  	left: 10px;
-  	bottom: 60px;
+  	left: 30px;
+  	bottom: 320px;
  	width: 100%;
   	height: 80px;
 }
@@ -413,8 +413,8 @@ header div ul li.niz2{
 	margin: 2px;
 	padding-bottom: 90px;
 	position: absolute;
-  	left: 10px;
-  	bottom: 0px;
+  	left: 30px;
+  	bottom: 260px;
  	width: 100%;
   	height: 80px;
 }
@@ -553,7 +553,7 @@ header nav li:last-child{
 	margin-bottom: 15px;
 	text-align: left;
 	position: relative;
-	top: -170px; left: -600px;
+	top: -45px; left: -400px;
 	margin-bottom: -10px;
 }
 
@@ -562,7 +562,7 @@ header nav li:last-child{
 	margin-bottom: 15px;
 	text-align: left;
 	position: relative;
-	top: -170px; left: -652px;
+	top: -40px; left: -451px;
 	margin-bottom: -10px;
 }
 
@@ -603,7 +603,7 @@ header nav li:last-child{
 	position: relative;
 	padding: 12px;
 	margin: 7px;
-	top: -160px; left: -675px;
+	top: -30px; left: -474px;
 }
 
 
@@ -853,3 +853,4 @@ footer p a{
 @media (max-width: 1200px) {
 	#bsaHolder{ display:none;}
 }
+
