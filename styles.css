@@ -1,0 +1,856 @@
+/*-------------
+ 	General
+-------------*/
+
+a img {  
+	width:40%; 
+	float:left; 
+	} 
+	.note { 
+	filter: invert(100%); 
+	-webkit-filter:invert(100%); 
+	margin: 100%;
+	}
+
+	.hpanel { 
+	margin: 1px;
+		}
+
+	.down{
+	filter: invert(100%); 
+	-webkit-filter:invert(100%);
+	padding-bottom: 90px;
+	position: absolute;
+  	left: 20px;
+  	bottom: 320px;
+ 	width: 100%;
+  	height: 80px;
+	}
+
+	.down2{
+		filter: invert(100%); 
+		-webkit-filter:invert(100%);
+		padding-bottom: 90px;
+		position: absolute;
+		  left: 20px;
+		  bottom: 260px;
+		 width: 100%;
+		  height: 80px;
+		}
+
+		@media (max-width: 1500px){
+
+			.down{
+				min-height: 800px;
+				padding-bottom: 90px;
+				position: absolute;
+				  left: 20px;
+				  bottom: -450px;
+				 width: 100%;
+				  height: 80px;
+			}
+		
+			.down2{
+				min-height: 800px;
+				padding-bottom: 90px;
+				position: absolute;
+				  left: 20px;
+				  bottom: -510px;
+				 width: 100%;
+				  height: 80px;
+			}
+		}
+
+
+	
+/* ВНЕШНИЙ БЛОК */
+#panel {
+    position: fixed; /* положение */
+    top: 0px; /* отступ сверху */
+    left: 0; /* отступ слева */
+    background: #000; /* цвет фона */
+	opacity: .5; /* прозрачность блока */
+    width: 70px; /* ширина блока */
+    height: 1000px; /* высота блока */
+    font: 14px Arial; /* размер и тип шрифта */
+    color: #fff; /* цвет текста */
+    text-align: center; /* выравнивание текста по центру */
+    padding: -20px; /* отступы от границ внутри блока */
+
+    -webkit-transition-duration: 0.3s; /* анимационное выдвижение для всех браузеров*/
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+
+    -webkit-border-radius: 0 5px 5px 0; /* закругление границ для всех браузеров*/
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    }
+
+
+/* СКРЫТЫЙ БЛОК */
+#hidden_panel {
+    position: fixed; /* положение */
+    top: 0px; /* отступ сверху */
+    left: -220px; /* отступ слева */
+    background: #000; /* цвет фона */
+    color: #fff; /* цвет текста */
+    width: 230px; /* ширина блока */
+    height: 1000px; /* высота блока */
+    padding: 10px; /* отступы от границ внутри блока */
+    text-align: left; /* выравнивание текста */
+
+
+    -webkit-transition-duration: 0.3s; /* анимационное выдвижение для всех браузеров*/
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+
+    -webkit-border-radius: 0 5px 5px 0; /* закругление границ для всех браузеров*/
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    }
+#panel:hover {
+    left: 220px; /* при наведении выдвигается на скрытые 200px + 20px отступы */
+}
+#panel:hover #hidden_panel {
+    left: 0; /* отступ слева */
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font: normal 16px sans-serif;
+	color: #555;
+}
+
+ul, nav{
+	list-style: none;
+}
+
+ul{
+	display: block;
+	margin-bottom: 25px;
+	font-size: 32px;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+
+	opacity: 0.9;
+}
+
+a:hover{
+	opacity: 1;
+}
+
+.topbutton {
+	width:63px;
+	border:2px solid #000;
+	background:#7C00F3	;
+	text-align:center;
+	padding:10px;
+	position:fixed;
+	bottom:50px;
+	right:50px;
+	cursor:pointer;
+	color:#fff;
+	font-family: 'Quicksand';
+	font-size:30px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 50px;
+	-khtml-border-radius: 5px;
+	}
+
+a.btn{
+	color: #fff;
+	border-radius: 4px;
+	text-transform: uppercase;
+	background-color: #7C00F3
+	;
+	font-weight: 800;
+	text-align: center;
+}
+
+html, body {
+	height: 100%;
+  }
+  
+  .wrap {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .button {
+	min-width: 300px;
+	min-height: 60px;
+	font-family: 'Nunito', sans-serif;
+	font-size: 22px;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+	font-weight: 700;
+	color: #fff;
+	background: #7C00F3;
+	border: none;
+	border-radius: 1000px;
+	box-shadow: 12px 12px 24px #7C00F3	;
+	transition: all 0.3s ease-in-out 0s;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+	padding: 10px;
+	}
+  
+  
+  
+  .button:hover, .button:focus {
+	color: #313133;
+	transform: translateY(-6px);
+  }
+  
+  button:hover::before, button:focus::before {
+	opacity: 1;
+  }
+  
+  button::after {
+	content: '';
+	width: 30px; height: 30px;
+	border-radius: 100%;
+	border: 6px solid #7C00F3;
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: ring 1.5s infinite;
+  }
+  
+  button:hover::after, button:focus::after {
+	animation: none;
+	display: none;
+  }
+  
+  @keyframes ring {
+	0% {
+	  width: 30px;
+	  height: 30px;
+	  opacity: 1;
+	}
+	100% {
+	  width: 300px;
+	  height: 300px;
+	  opacity: 0;
+	}
+  }
+
+hr{
+	width: 150px;
+	height: 2px;
+	background-color: #7C00F3	;
+	border: 0;
+	margin-bottom: 80px;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 125px 100px;
+}
+
+@media (max-width: 1000px){
+
+	section{
+		padding: 100px 50px;
+	}
+
+}
+
+@media (max-width: 600px){
+
+	section{
+		padding: 80px 30px;
+	}
+
+}
+
+section h3.title{
+	color: #000;
+	text-transform: capitalize; 
+	font: bold 32px 'Red Hat Display', sans-serif;
+	margin-bottom: 35px;
+	text-align: center;
+	width: 200px;/* Ширина слоя */
+    background: #7C00F3; /* Цвет фона */
+    height: 50px; /* Высота слоя */
+    padding: 5px; /* Поля вокруг текста */
+	
+	position: left 
+   }
+
+   section h3.title1{
+	color: #000;
+	text-transform: capitalize; 
+	font: bold 30px 'Red Hat Display', sans-serif;
+	margin-bottom: 35px;
+	text-align: center;
+	width: 420px;/* Ширина слоя */
+    background: #7C00F3; /* Цвет фона */
+    height: 50px; /* Высота слоя */
+    padding: 5px; /* Поля вокруг текста */
+	border-radius: 1000px;
+	position: left 
+   }
+  
+ 
+   section h3.title2{
+	color: #000;
+	text-transform: capitalize; 
+	font: bold 30px 'Red Hat Display', sans-serif;
+	margin-bottom: -14px;
+	text-align: center;
+	width: 320px;/* Ширина слоя */
+    background: #7C00F3; /* Цвет фона */
+    height: 50px; /* Высота слоя */
+    padding: 5px; /* Поля вокруг текста */
+	border-radius: 1000px;
+	position: left 
+   }
+
+   section p{
+	color: #fff;
+	text-align: left;
+	font: bold 32px 'Red Hat Display', sans-serif;
+   }
+
+   .round {
+    border-radius: 1000px; /* Радиус скругления */
+    box-shadow: 0 0 40px #7C00F3; /* Параметры тени */
+   }
+
+
+section h4.title{
+	color: #414a4f;
+	text-transform: capitalize; 
+	font: bold 32px 'Open Sans', sans-serif;
+	margin-bottom: 35px;
+	text-align: center;
+}
+
+section h1{
+	color: #fff;
+	text-transform: capitalize; 
+	font: bold 32px 'Open Sans', sans-serif;
+	margin-bottom: 35px;
+	text-align: left;
+}
+
+section p{
+	max-width: 800px;
+	text-align: center;
+	margin-bottom: 35px;
+	padding: 0 20px;
+	line-height: 2;
+}
+
+ul.grid{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+/*-------------
+ 	Header
+-------------*/
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #7C00F3	;
+	padding: 20px 30px 0;
+}
+header div ul li .logo {
+	width: 10px;
+	height:
+	10px;
+ }
+
+header div ul li{
+	margin: 24px;
+	font-family: 'Quicksand', sans-serif;
+}
+
+header div ul li.niz{
+	margin: 2px;
+	padding-bottom: 90px;
+	position: absolute;
+  	left: 30px;
+  	bottom: 320px;
+ 	width: 100%;
+  	height: 80px;
+}
+
+header div ul li.niz2{
+	margin: 2px;
+	padding-bottom: 90px;
+	position: absolute;
+  	left: 30px;
+  	bottom: 260px;
+ 	width: 100%;
+  	height: 80px;
+}
+
+header h2{
+	font-family: 'Quicksand', sans-serif;
+}
+
+header nav{
+	display: flex;
+}
+
+header nav li{
+	margin: 0 -20px;
+	margin-left: 30px;
+	font-family:'Quicksand', sans-serif;
+	border: solid;
+	border-radius: 1000px;
+	transition: all 0.3s ease-in-out 0s;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+	padding: 10px;
+}
+
+
+
+header h1{
+	min-width: 40px;
+	min-height: 0px;
+	font-family: 'Nunito', sans-serif;
+	font-size: 15px;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+	font-weight: 700;
+	color: #000;
+	background: #7C00F3;
+  	border: r;
+	border-radius: 1000px;	
+	transition: all 0.3s ease-in-out 0s;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+	padding: 1px;
+}
+
+header nav li:first-child{
+	margin-left: 0;	
+}
+
+header nav li:last-child{
+	margin-right: 0px;	
+}
+
+
+
+@media (max-width: 1000px){
+	header{
+		padding: 20px 50px;
+	}
+}
+
+
+@media (max-width: 700px){
+	header{
+		flex-direction: column;		
+	}
+
+	header h2{
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 1500px){
+
+	header div ul li.niz{
+		min-height: 800px;
+		padding-bottom: 90px;
+		position: absolute;
+		  left: 20px;
+		  bottom: -450px;
+		 width: 100%;
+		  height: 80px;
+	}
+
+	header div ul li.niz2{
+		min-height: 800px;
+		padding-bottom: 90px;
+		position: absolute;
+		  left: 20px;
+		  bottom: -505px;
+		width: 100%;
+		  height: 80px;
+	}
+}
+
+
+
+/*----------------
+ 	Hero Section
+----------------*/
+
+.hero{
+	justify-content: end;
+	min-height: 100vh;
+	color: #fff;
+	text-align: left;	
+}
+
+.hero .background-image{
+	position: absolute;
+	top: -120px;
+	left: 0;
+	width: 100%;
+	height: 120%;
+	background-size: cover;
+	background-color: #000	;
+	background-position: center center;
+    background-attachment: fixed;
+	z-index: -1;
+}
+
+.hero .background-image:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #111E26;
+	opacity: 0.000000001;
+}
+
+.hero h1{
+	font: bold 60px 'Red Hat Display', sans-serif; 
+	margin-bottom: 15px;
+	text-align: left;
+	position: relative;
+	top: -45px; left: -400px;
+	margin-bottom: -10px;
+}
+
+.hero h2{
+	font: bold 60px 'Red Hat Display', sans-serif;
+	margin-bottom: 15px;
+	text-align: left;
+	position: relative;
+	top: -40px; left: -451px;
+	margin-bottom: -10px;
+}
+
+.hero .wrap nav h3{
+	min-width: 40px;
+	min-height: 0px;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+	font-weight: 700;
+	color: #fff;
+	background: transparent;
+  	border: solid 2px;
+	border-radius: 1000px;	
+	transition: all 0.3s ease-in-out 0s;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+	padding: 10px;
+	margin: 7px;
+}
+
+.hero .wrap h3{
+	min-width: 40px;
+	min-height: 0px;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+	font-weight: 700;
+	color: #000;
+	background: #7C00F3;
+	border-radius: 1000px;	
+	transition: all 0.3s ease-in-out 0s;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+	padding: 12px;
+	margin: 7px;
+	top: -30px; left: -474px;
+}
+
+
+.hero a.btn{
+	padding: 10px 30px;
+	border-radius: 30px;
+}
+
+
+@media (max-width: 1500px){
+
+	.hero{
+		min-height: 800px;
+	}
+
+	.hero h1{
+		font-size: 48px;
+		position: relative;
+		padding: 0px;
+		margin: 0px;
+		top: -215px; left: 0px;
+	}
+
+	.hero h2{
+		font-size: 48px;
+		position: relative;
+		padding: 0px;
+		margin: 0px;
+		top: -210px; left: 0px;
+	}
+
+	.hero .wrap nav h3{
+		font-size: 25px;
+		position: relative;
+		padding: 5px;
+		margin: 0px;
+		top: -200px; left: 0px;
+	}
+
+	.hero .wrap h3{
+		font-size: 25px;
+		position: relative;
+		padding: 5px;
+		margin: 10px;
+		top: -200px; left: 0px;
+	}
+
+	.hero h3{
+		font-size: 24px;
+	}
+
+	.hero a.btn{
+		padding: 15px 40px;
+	}
+}
+
+
+/*----------------------
+ 	Features Section
+----------------------*/
+
+.features{
+	background-color: #000;
+}
+
+
+.features .grid li{
+	padding: 0 10px;
+	flex-basis: 33%;
+	text-align: center;
+}
+
+.features .grid li i{
+    font-size: 50px;
+    color: #7C00F3	;
+    margin-bottom: 25px;
+}
+
+.features .grid li h4{
+	color: #555;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.features .grid li p{
+	margin: 0;
+	font-size: 23px;
+}
+
+@media (max-width: 1000px){
+
+	.features .grid li{
+		flex-basis: 70%;
+		margin-bottom: 65px;
+	}
+
+	.features .grid li:last-child{
+		margin-bottom: 0;
+	}
+
+}
+
+
+@media (max-width: 600px){
+
+	.features .grid li{
+		flex-basis: 100%;
+	}
+
+}
+
+
+
+/*--------------------
+ 	Reviews Section
+--------------------*/
+
+.reviews{
+	background-color: #fff;
+}
+
+.reviews .quote{
+	text-align: left;
+	width: 60%;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+
+@media (max-width: 1000px){
+
+	.reviews .quote{
+		font-size: 20px;
+	}
+
+
+}
+
+
+
+/*---------------------
+ 	Contact Section
+---------------------*/
+
+.contact{
+	background-color: #000;
+}
+
+.contact p{
+	font: normal 20px 'Red Hat Display', sans-serif;
+	margin-bottom: 40px;
+}
+
+.contact form{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	max-width: 800px;
+	width: 80%;
+}
+
+.contact form input{
+	padding: 15px;
+	flex: 1;
+	margin-right: 30px;
+	font-size: 18px;
+	color: #555;
+}
+
+.contact form .btn{
+	padding: 18px 42px;
+}
+
+
+@media (max-width: 800px){
+
+	.contact form input{
+		flex-basis: 100%;
+		margin: 0 0 20px 0;
+	}
+
+}
+
+
+
+
+/*-------------
+ 	Footer
+-------------*/
+
+footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+	padding: 60px 0; 
+	box-shadow: -0px -50px 50px -30px #7C00F3 inset;
+}
+
+footer ul{
+	display: flex;
+	margin-bottom: 25px;
+	font-size: 32px;
+}
+
+footer ul li{
+	margin: 0 8px;	
+}
+
+footer ul li:first-child{
+	margin-left: 0;	
+}
+
+footer ul li:last-child{
+	margin-right: 0;	
+}
+
+footer p{
+	text-transform: uppercase;
+	font-size: 14px;
+	color: rgba(255,255,255,0.6);
+	margin-bottom: 10px;
+}
+
+footer p a{
+	color: #fff;
+}
+
+@media (max-width: 700px){
+
+	footer{
+		padding: 80px 15px;
+	}
+
+}
+
+
+/* -- Demo ads -- */
+
+@media (max-width: 1200px) {
+	#bsaHolder{ display:none;}
+}
+
